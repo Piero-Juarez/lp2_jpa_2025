@@ -12,14 +12,14 @@ public class TestCliente {
 		ClienteImp clienteImp = new ClienteImp();
 
 		// Añadiendo datos
-		//cliente.setId(null);
-		cliente.setNombre("Leo");
+		cliente.setId(3);
+		/*cliente.setNombre("Leo");
 		cliente.setApellidos("Messi");
 		cliente.setDni("3841841");
 		cliente.setEmail("la_cabra@gmail.com");
 		cliente.setSexo("M");
 		cliente.setNacionalidad("Argentina");
-		cliente.setTelefono("264813");
+		cliente.setTelefono("264813");*/
 
 		// Invocación del método crear
 		//clienteImp.registrarCliente(cliente);
@@ -31,12 +31,16 @@ public class TestCliente {
 		//clienteImp.eliminarCliente(cliente);
 		
 		// Invocación del método listar
-		List<Cliente> listaClietes = clienteImp.listarCliente();
+		/*List<Cliente> listaClietes = clienteImp.listarCliente();
 		for(Cliente c : listaClietes) {
 			System.out.println(c);
-		}
+		}*/
 		
-		//System.out.println("El cliente se agregó correctamente.");
+		// Testear el método buscar
+		Cliente clienteEncontrado = clienteImp.buscarCliente(cliente);
+		System.out.println(clienteEncontrado);
+		
+		System.out.println("El cliente se encontró correctamente.");
 		
 	}
 }

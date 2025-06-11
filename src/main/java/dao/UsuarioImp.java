@@ -61,6 +61,7 @@ public class UsuarioImp implements IUsuario {
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
 		Usuario usuarioEncontrado = null;
 		try {
+			
 			entityManager.getTransaction().begin();
 			usuarioEncontrado = entityManager.find(Usuario.class, usuarioBuscado.getId());
 			entityManager.getTransaction().commit();
